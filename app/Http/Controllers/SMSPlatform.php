@@ -49,7 +49,6 @@ class SMSPlatform extends Controller
                 $first = collect($data)->first();
                 if(preg_match("/^{$first}/", $recipient)){
                     $amount += ($validated["pages"] * collect($data)->last());
-                    break;
                 }
                }
             }
